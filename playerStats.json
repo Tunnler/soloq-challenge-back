@@ -1,0 +1,70 @@
+[
+  {
+    "summonerName": "Pause",
+    "rankedStats": {
+      "leagueId": "9ad435c4-4077-42f8-b7b4-912b6e148203",
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "GOLD",
+      "rank": "IV",
+      "summonerId": "aDYZmUnrK35qumhnvt_PUMRPyxEEBv6yVdJKcDyhP2JgnVg",
+      "leaguePoints": 1,
+      "wins": 7,
+      "losses": 2,
+      "veteran": false,
+      "inactive": false,
+      "freshBlood": false,
+      "hotStreak": false
+    }
+  },
+  {
+    "summonerName": "Dritzh",
+    "rankedStats": {
+      "leagueId": "8e7ad9fe-db69-4a64-a62f-0230d511f29c",
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "DIAMOND",
+      "rank": "IV",
+      "summonerId": "wsveOgMMhhZRM5kw6jxD3cQlc6YgW0C1qf6Z4vYv898HQ0w",
+      "leaguePoints": 64,
+      "wins": 18,
+      "losses": 9,
+      "veteran": false,
+      "inactive": false,
+      "freshBlood": false,
+      "hotStreak": false
+    }
+  },
+  {
+    "summonerName": "Sleeper",
+    "rankedStats": {
+      "leagueId": "3e91408b-d56b-43a7-8192-779c4936c280",
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "GOLD",
+      "rank": "IV",
+      "summonerId": "lKnlcsCy61GUY5SDss1Sqwyfd3N3Vm1nImL5viqieWTW8IY",
+      "leaguePoints": 68,
+      "wins": 41,
+      "losses": 34,
+      "veteran": false,
+      "inactive": false,
+      "freshBlood": false,
+      "hotStreak": false
+    }
+  },
+  {
+    "summonerName": "Gërsön",
+    "rankedStats": {
+      "leagueId": "c3ba13b0-4519-4cfd-9cbe-b726c1621979",
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "SILVER",
+      "rank": "I",
+      "summonerId": "6il2Mx74qzX2vGlaKkUnNauV1pRtc4_jLm4rqXid2CI5ntg",
+      "leaguePoints": 96,
+      "wins": 35,
+      "losses": 31,
+      "veteran": false,
+      "inactive": false,
+      "freshBlood": false,
+      "hotStreak": false
+    }
+  }
+]
