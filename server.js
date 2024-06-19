@@ -12,6 +12,9 @@ const players = [
   { username: 'Dritzh', tag: '098' },
   { username: 'Sleeper', tag: '9905' },
   { username: 'Gërsön', tag: 'lan' },
+  { username: 'PP3R3GRIN0', tag: '2000' },
+  { username: 'RedSight182', tag: 'LAN' },
+  { username: 'The Peanut King', tag: 'lan' },
 ];
 
 const getPUUID = async (username, tag) => {
@@ -47,7 +50,7 @@ const updatePlayerStats = async () => {
 };
 
 // Actualizar datos cada 5 minutos
-cron.schedule('*/2 * * * *', updatePlayerStats);
+cron.schedule('*/5 * * * *', updatePlayerStats);
 
 // Ruta para obtener las estadísticas (ahora será la ruta principal)
 app.get('/', (req, res) => {
