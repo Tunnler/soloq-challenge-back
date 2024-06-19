@@ -72,7 +72,7 @@ app.get('/', (req, res) => {
 });
 
 // Ruta para servir riot.txt
-app.get('/riot.txt', (req, res) => {
+app.get('//riot.txt', (req, res) => {
   fs.readFile('riot.txt', 'utf8', (err, data) => {
     if (err) {
       console.error('Error al leer riot.txt:', err);
