@@ -1,23 +1,73 @@
 [
   {
-    "summonerName": "Pause",
+    "summonerName": "abueloelote2",
+    "encryptedSummonerId": "VDkwxZMJRrFUsnExcoZAET7npWkTsZhQ53KEeq8SXQw9HOM",
+    "rol": "top",
+    "profileIconId": 6301,
+    "summonerLevel": 368,
     "rankedStats": {
-      "leagueId": "9ad435c4-4077-42f8-b7b4-912b6e148203",
+      "leagueId": "e281943c-f73f-4f33-b158-0094544f18b6",
       "queueType": "RANKED_SOLO_5x5",
-      "tier": "GOLD",
-      "rank": "IV",
-      "summonerId": "aDYZmUnrK35qumhnvt_PUMRPyxEEBv6yVdJKcDyhP2JgnVg",
-      "leaguePoints": 1,
-      "wins": 7,
-      "losses": 2,
+      "tier": "IRON",
+      "rank": "II",
+      "summonerId": "VDkwxZMJRrFUsnExcoZAET7npWkTsZhQ53KEeq8SXQw9HOM",
+      "leaguePoints": 17,
+      "wins": 29,
+      "losses": 40,
       "veteran": false,
       "inactive": false,
-      "freshBlood": false,
+      "freshBlood": true,
       "hotStreak": false
     }
   },
   {
+    "summonerName": "RedSight182",
+    "encryptedSummonerId": "-h5W5FeGdwpHEsK4SYqLfB5C770TsBUsefmH_qJtNY5ek9I",
+    "rol": "jungle",
+    "profileIconId": 3798,
+    "summonerLevel": 101,
+    "rankedStats": {
+      "leagueId": "87fc099b-50f2-4e14-8380-3eb984f52495",
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "IRON",
+      "rank": "II",
+      "summonerId": "-h5W5FeGdwpHEsK4SYqLfB5C770TsBUsefmH_qJtNY5ek9I",
+      "leaguePoints": 84,
+      "wins": 7,
+      "losses": 9,
+      "veteran": false,
+      "inactive": false,
+      "freshBlood": false,
+      "hotStreak": true
+    }
+  },
+  {
+    "summonerName": "The Peanut King",
+    "encryptedSummonerId": "xe34R0laIY4Ef9ceHYUlqYN5G2cvj7hJ3xwY1rP7dfh1-zo",
+    "rol": "mid",
+    "profileIconId": 4423,
+    "summonerLevel": 113,
+    "rankedStats": {
+      "leagueId": "87fc099b-50f2-4e14-8380-3eb984f52495",
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "IRON",
+      "rank": "II",
+      "summonerId": "xe34R0laIY4Ef9ceHYUlqYN5G2cvj7hJ3xwY1rP7dfh1-zo",
+      "leaguePoints": 19,
+      "wins": 7,
+      "losses": 9,
+      "veteran": false,
+      "inactive": false,
+      "freshBlood": false,
+      "hotStreak": true
+    }
+  },
+  {
     "summonerName": "Dritzh",
+    "encryptedSummonerId": "wsveOgMMhhZRM5kw6jxD3cQlc6YgW0C1qf6Z4vYv898HQ0w",
+    "rol": "adc",
+    "profileIconId": 6621,
+    "summonerLevel": 147,
     "rankedStats": {
       "leagueId": "8e7ad9fe-db69-4a64-a62f-0230d511f29c",
       "queueType": "RANKED_SOLO_5x5",
@@ -34,7 +84,32 @@
     }
   },
   {
+    "summonerName": "Pause",
+    "encryptedSummonerId": "aDYZmUnrK35qumhnvt_PUMRPyxEEBv6yVdJKcDyhP2JgnVg",
+    "rol": "mid",
+    "profileIconId": 3466,
+    "summonerLevel": 358,
+    "rankedStats": {
+      "leagueId": "9ad435c4-4077-42f8-b7b4-912b6e148203",
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "GOLD",
+      "rank": "IV",
+      "summonerId": "aDYZmUnrK35qumhnvt_PUMRPyxEEBv6yVdJKcDyhP2JgnVg",
+      "leaguePoints": 1,
+      "wins": 7,
+      "losses": 2,
+      "veteran": false,
+      "inactive": false,
+      "freshBlood": false,
+      "hotStreak": false
+    }
+  },
+  {
     "summonerName": "Sleeper",
+    "encryptedSummonerId": "lKnlcsCy61GUY5SDss1Sqwyfd3N3Vm1nImL5viqieWTW8IY",
+    "rol": "top",
+    "profileIconId": 3536,
+    "summonerLevel": 535,
     "rankedStats": {
       "leagueId": "3e91408b-d56b-43a7-8192-779c4936c280",
       "queueType": "RANKED_SOLO_5x5",
@@ -52,6 +127,10 @@
   },
   {
     "summonerName": "Gërsön",
+    "encryptedSummonerId": "6il2Mx74qzX2vGlaKkUnNauV1pRtc4_jLm4rqXid2CI5ntg",
+    "rol": "supp",
+    "profileIconId": 7,
+    "summonerLevel": 183,
     "rankedStats": {
       "leagueId": "c3ba13b0-4519-4cfd-9cbe-b726c1621979",
       "queueType": "RANKED_SOLO_5x5",
@@ -64,6 +143,48 @@
       "veteran": false,
       "inactive": false,
       "freshBlood": false,
+      "hotStreak": false
+    }
+  },
+  {
+    "summonerName": "PP3R3GRIN0",
+    "encryptedSummonerId": "rdL7trZShZiunVeHHZMY_4DhnX-_n0qyDvTnEsdfhmOk6Uk",
+    "rol": "adc",
+    "profileIconId": 6621,
+    "summonerLevel": 243,
+    "rankedStats": {
+      "leagueId": "4a096e1e-5039-412d-b670-275ae58aad27",
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "BRONZE",
+      "rank": "IV",
+      "summonerId": "rdL7trZShZiunVeHHZMY_4DhnX-_n0qyDvTnEsdfhmOk6Uk",
+      "leaguePoints": 38,
+      "wins": 45,
+      "losses": 41,
+      "veteran": false,
+      "inactive": false,
+      "freshBlood": false,
+      "hotStreak": false
+    }
+  },
+  {
+    "summonerName": "Get Cachorred",
+    "encryptedSummonerId": "zTDA_2w3d5KbftYfq8Hjfdt8W_S-95NSzN25h3tLL1wKBQ",
+    "rol": "adc",
+    "profileIconId": 29,
+    "summonerLevel": 700,
+    "rankedStats": {
+      "leagueId": "313279d2-f4e8-4699-bd3e-645919fc6302",
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "EMERALD",
+      "rank": "I",
+      "summonerId": "zTDA_2w3d5KbftYfq8Hjfdt8W_S-95NSzN25h3tLL1wKBQ",
+      "leaguePoints": 53,
+      "wins": 73,
+      "losses": 73,
+      "veteran": false,
+      "inactive": false,
+      "freshBlood": true,
       "hotStreak": false
     }
   }
