@@ -1,27 +1,8 @@
 [
   {
-    "summonerName": "abueloelote2",
-    "encryptedSummonerId": "VDkwxZMJRrFUsnExcoZAET7npWkTsZhQ53KEeq8SXQw9HOM",
-    "rol": "top",
-    "profileIconId": 6301,
-    "summonerLevel": 368,
-    "rankedStats": {
-      "leagueId": "e281943c-f73f-4f33-b158-0094544f18b6",
-      "queueType": "RANKED_SOLO_5x5",
-      "tier": "IRON",
-      "rank": "II",
-      "summonerId": "VDkwxZMJRrFUsnExcoZAET7npWkTsZhQ53KEeq8SXQw9HOM",
-      "leaguePoints": 17,
-      "wins": 29,
-      "losses": 40,
-      "veteran": false,
-      "inactive": false,
-      "freshBlood": true,
-      "hotStreak": false
-    }
-  },
-  {
+    "streamer": "Gangbang182",
     "summonerName": "RedSight182",
+    "tag": "LAN",
     "encryptedSummonerId": "-h5W5FeGdwpHEsK4SYqLfB5C770TsBUsefmH_qJtNY5ek9I",
     "rol": "jungle",
     "profileIconId": 3798,
@@ -42,7 +23,9 @@
     }
   },
   {
+    "streamer": "Greddyy",
     "summonerName": "The Peanut King",
+    "tag": "LAN",
     "encryptedSummonerId": "xe34R0laIY4Ef9ceHYUlqYN5G2cvj7hJ3xwY1rP7dfh1-zo",
     "rol": "mid",
     "profileIconId": 4423,
@@ -63,7 +46,9 @@
     }
   },
   {
+    "streamer": "Dritzh",
     "summonerName": "Dritzh",
+    "tag": "098",
     "encryptedSummonerId": "wsveOgMMhhZRM5kw6jxD3cQlc6YgW0C1qf6Z4vYv898HQ0w",
     "rol": "adc",
     "profileIconId": 6621,
@@ -84,7 +69,9 @@
     }
   },
   {
-    "summonerName": "Pause",
+    "streamer": "Pause",
+    "summonerName": "pause",
+    "tag": "LAN",
     "encryptedSummonerId": "aDYZmUnrK35qumhnvt_PUMRPyxEEBv6yVdJKcDyhP2JgnVg",
     "rol": "mid",
     "profileIconId": 3466,
@@ -105,7 +92,9 @@
     }
   },
   {
+    "streamer": "IDFK05",
     "summonerName": "Sleeper",
+    "tag": "9905",
     "encryptedSummonerId": "lKnlcsCy61GUY5SDss1Sqwyfd3N3Vm1nImL5viqieWTW8IY",
     "rol": "top",
     "profileIconId": 3536,
@@ -126,7 +115,9 @@
     }
   },
   {
+    "streamer": "Gerson",
     "summonerName": "Gërsön",
+    "tag": "LAN",
     "encryptedSummonerId": "6il2Mx74qzX2vGlaKkUnNauV1pRtc4_jLm4rqXid2CI5ntg",
     "rol": "supp",
     "profileIconId": 7,
@@ -147,7 +138,9 @@
     }
   },
   {
+    "streamer": "Peregrino",
     "summonerName": "PP3R3GRIN0",
+    "tag": "2000",
     "encryptedSummonerId": "rdL7trZShZiunVeHHZMY_4DhnX-_n0qyDvTnEsdfhmOk6Uk",
     "rol": "adc",
     "profileIconId": 6621,
@@ -158,9 +151,9 @@
       "tier": "BRONZE",
       "rank": "IV",
       "summonerId": "rdL7trZShZiunVeHHZMY_4DhnX-_n0qyDvTnEsdfhmOk6Uk",
-      "leaguePoints": 38,
-      "wins": 45,
-      "losses": 41,
+      "leaguePoints": 8,
+      "wins": 46,
+      "losses": 43,
       "veteran": false,
       "inactive": false,
       "freshBlood": false,
@@ -168,7 +161,9 @@
     }
   },
   {
+    "streamer": "xKeven",
     "summonerName": "Get Cachorred",
+    "tag": "FNTIC",
     "encryptedSummonerId": "zTDA_2w3d5KbftYfq8Hjfdt8W_S-95NSzN25h3tLL1wKBQ",
     "rol": "adc",
     "profileIconId": 29,
@@ -179,13 +174,13 @@
       "tier": "EMERALD",
       "rank": "I",
       "summonerId": "zTDA_2w3d5KbftYfq8Hjfdt8W_S-95NSzN25h3tLL1wKBQ",
-      "leaguePoints": 53,
-      "wins": 73,
-      "losses": 73,
+      "leaguePoints": 66,
+      "wins": 77,
+      "losses": 76,
       "veteran": false,
       "inactive": false,
       "freshBlood": true,
-      "hotStreak": false
+      "hotStreak": true
     }
   }
 ]

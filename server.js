@@ -6,18 +6,16 @@ const cron = require('node-cron');
 const app = express();
 const port = process.env.PORT || 3001;
 
-const RIOT_API_KEY = 'RGAPI-e3f8d747-148c-48e1-9702-bfe7f4fe058f'; // Reemplaza esto con tu clave de API de Riot
+const RIOT_API_KEY = 'RGAPI-e3f8d747-148c-48e1-9702-bfe7f4fe058f'; // Reemplaza esto con tu clave de API de Riot ;)
 const players = [
-  { username: 'abueloelote2', tag: 'lan', rol: 'top', encryptedSummonerId: 'VDkwxZMJRrFUsnExcoZAET7npWkTsZhQ53KEeq8SXQw9HOM' },
-  { username: 'RedSight182', tag: 'LAN', rol: 'jungle', encryptedSummonerId: '-h5W5FeGdwpHEsK4SYqLfB5C770TsBUsefmH_qJtNY5ek9I' },
-  { username: 'The Peanut King', tag: 'lan', rol: 'mid', encryptedSummonerId: 'xe34R0laIY4Ef9ceHYUlqYN5G2cvj7hJ3xwY1rP7dfh1-zo' },
-  { username: 'Dritzh', tag: '098', rol: 'adc', encryptedSummonerId: 'wsveOgMMhhZRM5kw6jxD3cQlc6YgW0C1qf6Z4vYv898HQ0w' },
-  { username: 'Pause', tag: 'lan', rol: 'mid', encryptedSummonerId: 'aDYZmUnrK35qumhnvt_PUMRPyxEEBv6yVdJKcDyhP2JgnVg' },
-  { username: 'Sleeper', tag: '9905', rol: 'top', encryptedSummonerId: 'lKnlcsCy61GUY5SDss1Sqwyfd3N3Vm1nImL5viqieWTW8IY' },
-  { username: 'Gërsön', tag: 'lan', rol: 'supp', encryptedSummonerId: '6il2Mx74qzX2vGlaKkUnNauV1pRtc4_jLm4rqXid2CI5ntg' },
-  { username: 'PP3R3GRIN0', tag: '2000', rol: 'adc', encryptedSummonerId: 'rdL7trZShZiunVeHHZMY_4DhnX-_n0qyDvTnEsdfhmOk6Uk' },
-  { username: 'Get Cachorred', tag: 'FNTIC', rol: 'adc', encryptedSummonerId: 'zTDA_2w3d5KbftYfq8Hjfdt8W_S-95NSzN25h3tLL1wKBQ' },
-
+  { streamer: 'Gangbang182', username: 'RedSight182', tag: 'LAN', rol: 'jungle', encryptedSummonerId: '-h5W5FeGdwpHEsK4SYqLfB5C770TsBUsefmH_qJtNY5ek9I' },
+  { streamer: 'Greddyy', username: 'The Peanut King', tag: 'LAN', rol: 'mid', encryptedSummonerId: 'xe34R0laIY4Ef9ceHYUlqYN5G2cvj7hJ3xwY1rP7dfh1-zo' },
+  { streamer: 'Dritzh', username: 'Dritzh', tag: '098', rol: 'adc', encryptedSummonerId: 'wsveOgMMhhZRM5kw6jxD3cQlc6YgW0C1qf6Z4vYv898HQ0w' },
+  { streamer: 'Pause', username: 'pause', tag: 'LAN', rol: 'mid', encryptedSummonerId: 'aDYZmUnrK35qumhnvt_PUMRPyxEEBv6yVdJKcDyhP2JgnVg' },
+  { streamer: 'IDFK05', username: 'Sleeper', tag: '9905', rol: 'top', encryptedSummonerId: 'lKnlcsCy61GUY5SDss1Sqwyfd3N3Vm1nImL5viqieWTW8IY' },
+  { streamer: 'Gerson', username: 'Gërsön', tag: 'LAN', rol: 'supp', encryptedSummonerId: '6il2Mx74qzX2vGlaKkUnNauV1pRtc4_jLm4rqXid2CI5ntg' },
+  { streamer: 'Peregrino', username: 'PP3R3GRIN0', tag: '2000', rol: 'adc', encryptedSummonerId: 'rdL7trZShZiunVeHHZMY_4DhnX-_n0qyDvTnEsdfhmOk6Uk' },
+  { streamer: 'xKeven', username: 'Get Cachorred', tag: 'FNTIC', rol: 'adc', encryptedSummonerId: 'zTDA_2w3d5KbftYfq8Hjfdt8W_S-95NSzN25h3tLL1wKBQ' },
 ];
 
 const getSummonerBySummonerId = async (summonerId) => {
@@ -36,7 +34,9 @@ const fetchPlayerStats = async () => {
     const stats = await getRankedStatsBySummonerId(player.encryptedSummonerId);
     const soloStats = stats.find(stat => stat.queueType === 'RANKED_SOLO_5x5');
     return {
+      streamer: player.streamer,
       summonerName: player.username,
+      tag: player.tag,
       encryptedSummonerId: player.encryptedSummonerId,
       rol: player.rol,
       profileIconId: summoner.profileIconId,
@@ -68,6 +68,17 @@ app.get('/', (req, res) => {
       return res.status(500).json({ error: 'Failed to read data' });
     }
     res.json(JSON.parse(data));
+  });
+});
+
+// Ruta para servir riot.txt
+app.get('/riot.txt', (req, res) => {
+  fs.readFile('riot.txt', 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error al leer riot.txt:', err);
+      return res.status(500).send('Error interno del servidor');
+    }
+    res.send(data);
   });
 });
 
