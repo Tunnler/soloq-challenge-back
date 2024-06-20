@@ -6,20 +6,33 @@ const cron = require('node-cron');
 const app = express();
 const port = process.env.PORT || 3001;
 
-const RIOT_API_KEY = 'RGAPI-e3f8d747-148c-48e1-9702-bfe7f4fe058f'; // Reemplaza esto con tu clave de API de Riot ;)
+const RIOT_API_KEY = 'RGAPI-2ef0c92e-925b-4bf4-9988-6a6ff1e6898d'; // Reemplaza esto con tu clave de API de Riot ;)
 const players = [
-  { streamer: 'Gangbang182', username: 'RedSight182', tag: 'LAN', rol: 'jungle', encryptedSummonerId: '-h5W5FeGdwpHEsK4SYqLfB5C770TsBUsefmH_qJtNY5ek9I' },
-  { streamer: 'Greddyy', username: 'The Peanut King', tag: 'LAN', rol: 'mid', encryptedSummonerId: 'xe34R0laIY4Ef9ceHYUlqYN5G2cvj7hJ3xwY1rP7dfh1-zo' },
-  { streamer: 'Dritzh', username: 'Dritzh', tag: '098', rol: 'adc', encryptedSummonerId: 'wsveOgMMhhZRM5kw6jxD3cQlc6YgW0C1qf6Z4vYv898HQ0w' },
-  { streamer: 'Pause', username: 'pause', tag: 'LAN', rol: 'mid', encryptedSummonerId: 'aDYZmUnrK35qumhnvt_PUMRPyxEEBv6yVdJKcDyhP2JgnVg' },
-  { streamer: 'IDFK05', username: 'Sleeper', tag: '9905', rol: 'top', encryptedSummonerId: 'lKnlcsCy61GUY5SDss1Sqwyfd3N3Vm1nImL5viqieWTW8IY' },
-  { streamer: 'Gerson', username: 'Gërsön', tag: 'LAN', rol: 'supp', encryptedSummonerId: '6il2Mx74qzX2vGlaKkUnNauV1pRtc4_jLm4rqXid2CI5ntg' },
-  { streamer: 'Peregrino', username: 'PP3R3GRIN0', tag: '2000', rol: 'adc', encryptedSummonerId: 'rdL7trZShZiunVeHHZMY_4DhnX-_n0qyDvTnEsdfhmOk6Uk' },
-  { streamer: 'xKeven', username: 'Get Cachorred', tag: 'FNTIC', rol: 'adc', encryptedSummonerId: 'zTDA_2w3d5KbftYfq8Hjfdt8W_S-95NSzN25h3tLL1wKBQ' },
+  { streamer: 'Gangbang182', username: 'RedSight182', tag: 'LAN', rol: 'jungle'},
+  { streamer: 'Greddyy', username: 'The Peanut King', tag: 'LAN', rol: 'mid'},
+  { streamer: 'Dritzh', username: 'Dritzh', tag: '098', rol: 'adc'},
+  { streamer: 'Pause', username: 'pause', tag: 'LAN', rol: 'mid'},
+  { streamer: 'IDFK05', username: 'Sleeper', tag: '9905', rol: 'top'},
+  { streamer: 'Gerson', username: 'Gërsön', tag: 'LAN', rol: 'supp'},
+  { streamer: 'Peregrino', username: 'PP3R3GRIN0', tag: '2000', rol: 'adc'},
+  { streamer: 'xKeven', username: 'Get Cachorred', tag: 'FNTIC', rol: 'adc'},
+  { streamer: 'Tunnler', username: 'Tunnler', tag: 'LAN', rol: 'mid'},
+  { streamer: 'Powa', username: 'Powa', tag: 'Wapo', rol: 'jungle'},
+  { streamer: 'Sakuta', username: 'sakuta', tag: 'Die', rol: 'top'},
+  { streamer: 'Rejaimito', username: 'Bonkyi', tag: 'bonk', rol: 'supp'},
+  { streamer: 'Sr.Lemon', username: 'MrLemon', tag: 'L3M0N', rol: 'jungle'},
 ];
 
-const getSummonerBySummonerId = async (summonerId) => {
-  const response = await axios.get(`https://la1.api.riotgames.com/lol/summoner/v4/summoners/${summonerId}?api_key=${RIOT_API_KEY}`);
+const batchSize = 5; // Tamaño del lote de jugadores que se actualizarán cada vez
+const updateInterval = 5000; // Intervalo de tiempo entre actualizaciones de lotes (en milisegundos)
+
+const getPUUID = async (username, tag) => {
+  const response = await axios.get(`https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${username}/${tag}?api_key=${RIOT_API_KEY}`);
+  return response.data.puuid;
+};
+
+const getSummonerByPUUID = async (puuid) => {
+  const response = await axios.get(`https://la1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${RIOT_API_KEY}`);
   return response.data;
 };
 
@@ -28,38 +41,56 @@ const getRankedStatsBySummonerId = async (summonerId) => {
   return response.data;
 };
 
-const fetchPlayerStats = async () => {
-  const statsPromises = players.map(async player => {
-    const summoner = await getSummonerBySummonerId(player.encryptedSummonerId);
-    const stats = await getRankedStatsBySummonerId(player.encryptedSummonerId);
-    const soloStats = stats.find(stat => stat.queueType === 'RANKED_SOLO_5x5');
-    return {
-      streamer: player.streamer,
-      summonerName: player.username,
-      tag: player.tag,
-      encryptedSummonerId: player.encryptedSummonerId,
-      rol: player.rol,
-      profileIconId: summoner.profileIconId,
-      summonerLevel: summoner.summonerLevel,
-      rankedStats: soloStats || null
-    };
+const fetchPlayerStats = async (batch) => {
+  const statsPromises = batch.map(async player => {
+    try {
+      const puuid = await getPUUID(player.username, player.tag);
+      const summoner = await getSummonerByPUUID(puuid);
+      const stats = await getRankedStatsBySummonerId(summoner.id);
+      const soloStats = stats.find(stat => stat.queueType === 'RANKED_SOLO_5x5');
+      return { summonerName: player.username, rankedStats: soloStats || null };
+    } catch (error) {
+      console.error(`Error fetching stats for ${player.username}: ${error.message}`);
+      return { summonerName: player.username, error: true };
+    }
   });
 
   return Promise.all(statsPromises);
 };
 
-const updatePlayerStats = async () => {
+const updatePlayerStatsBatch = async (startIndex) => {
+  const batch = players.slice(startIndex, startIndex + batchSize);
+  const playerStats = await fetchPlayerStats(batch);
+  return playerStats;
+};
+
+const updateAllPlayerStats = async () => {
   try {
-    const playerStats = await fetchPlayerStats();
-    fs.writeFileSync('playerStats.json', JSON.stringify(playerStats, null, 2));
-    console.log('Player stats updated successfully.');
+    let startIndex = 0;
+    const totalPlayers = players.length;
+    const allPlayerStats = [];
+
+    while (startIndex < totalPlayers) {
+      const playerStats = await updatePlayerStatsBatch(startIndex);
+      allPlayerStats.push(...playerStats);
+      startIndex += batchSize;
+
+      // Espera un tiempo antes de actualizar el siguiente lote
+      await new Promise(resolve => setTimeout(resolve, updateInterval));
+    }
+
+    fs.writeFileSync('playerStats.json', JSON.stringify(allPlayerStats, null, 2));
+    console.log('Todos los datos de los jugadores se han actualizado correctamente.');
   } catch (error) {
-    console.error('Error updating player stats:', error.message);
+    console.error('Error al actualizar las estadísticas del jugador:', error.message);
   }
 };
 
+// Actualizar datos al iniciar el servidor
+updateAllPlayerStats();
+
 // Actualizar datos cada 5 minutos
-cron.schedule('*/5 * * * *', updatePlayerStats);
+cron.schedule('*/5 * * * *', updateAllPlayerStats);
 
 // Ruta para obtener las estadísticas (ahora será la ruta principal)
 app.get('/', (req, res) => {
@@ -83,6 +114,5 @@ app.get('//riot.txt', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-  updatePlayerStats(); // Actualizar datos al iniciar el servidor
+  console.log(`Servidor corriendo en el puerto ${port}`);
 });
