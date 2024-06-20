@@ -1,6 +1,11 @@
 [
   {
+    "streamer": "Gangbang182",
     "summonerName": "RedSight182",
+    "tag": "LAN",
+    "rol": "jungle",
+    "profileIconId": 3798,
+    "summonerLevel": 101,
     "rankedStats": {
       "leagueId": "87fc099b-50f2-4e14-8380-3eb984f52495",
       "queueType": "RANKED_SOLO_5x5",
@@ -17,7 +22,12 @@
     }
   },
   {
+    "streamer": "Greddyy",
     "summonerName": "The Peanut King",
+    "tag": "LAN",
+    "rol": "mid",
+    "profileIconId": 4423,
+    "summonerLevel": 114,
     "rankedStats": {
       "leagueId": "87fc099b-50f2-4e14-8380-3eb984f52495",
       "queueType": "RANKED_SOLO_5x5",
@@ -34,7 +44,12 @@
     }
   },
   {
+    "streamer": "Dritzh",
     "summonerName": "Dritzh",
+    "tag": "098",
+    "rol": "adc",
+    "profileIconId": 6621,
+    "summonerLevel": 147,
     "rankedStats": {
       "leagueId": "8e7ad9fe-db69-4a64-a62f-0230d511f29c",
       "queueType": "RANKED_SOLO_5x5",
@@ -51,7 +66,12 @@
     }
   },
   {
+    "streamer": "Pause",
     "summonerName": "pause",
+    "tag": "LAN",
+    "rol": "mid",
+    "profileIconId": 3466,
+    "summonerLevel": 358,
     "rankedStats": {
       "leagueId": "9ad435c4-4077-42f8-b7b4-912b6e148203",
       "queueType": "RANKED_SOLO_5x5",
@@ -68,7 +88,12 @@
     }
   },
   {
+    "streamer": "IDFK05",
     "summonerName": "Sleeper",
+    "tag": "9905",
+    "rol": "top",
+    "profileIconId": 3536,
+    "summonerLevel": 535,
     "rankedStats": {
       "leagueId": "3e91408b-d56b-43a7-8192-779c4936c280",
       "queueType": "RANKED_SOLO_5x5",
@@ -85,7 +110,12 @@
     }
   },
   {
+    "streamer": "Gerson",
     "summonerName": "Gërsön",
+    "tag": "LAN",
+    "rol": "supp",
+    "profileIconId": 7,
+    "summonerLevel": 183,
     "rankedStats": {
       "leagueId": "c3ba13b0-4519-4cfd-9cbe-b726c1621979",
       "queueType": "RANKED_SOLO_5x5",
@@ -102,7 +132,12 @@
     }
   },
   {
+    "streamer": "Peregrino",
     "summonerName": "PP3R3GRIN0",
+    "tag": "2000",
+    "rol": "adc",
+    "profileIconId": 6621,
+    "summonerLevel": 243,
     "rankedStats": {
       "leagueId": "4a096e1e-5039-412d-b670-275ae58aad27",
       "queueType": "RANKED_SOLO_5x5",
@@ -119,7 +154,12 @@
     }
   },
   {
+    "streamer": "xKeven",
     "summonerName": "Get Cachorred",
+    "tag": "FNTIC",
+    "rol": "adc",
+    "profileIconId": 29,
+    "summonerLevel": 701,
     "rankedStats": {
       "leagueId": "b0845da0-c6df-4bdb-aac8-88ea069be0af",
       "queueType": "RANKED_SOLO_5x5",
@@ -136,15 +176,30 @@
     }
   },
   {
+    "streamer": "Tunnler",
     "summonerName": "Tunnler",
+    "tag": "LAN",
+    "rol": "mid",
+    "profileIconId": 4663,
+    "summonerLevel": 492,
     "rankedStats": null
   },
   {
+    "streamer": "Powa",
     "summonerName": "Powa",
+    "tag": "Wapo",
+    "rol": "jungle",
+    "profileIconId": 6271,
+    "summonerLevel": 381,
     "rankedStats": null
   },
   {
+    "streamer": "Sakuta",
     "summonerName": "sakuta",
+    "tag": "Die",
+    "rol": "top",
+    "profileIconId": 1114,
+    "summonerLevel": 560,
     "rankedStats": {
       "leagueId": "7c3dfcad-6d86-3d12-960d-df046931130b",
       "queueType": "RANKED_SOLO_5x5",
@@ -161,7 +216,12 @@
     }
   },
   {
+    "streamer": "Rejaimito",
     "summonerName": "Bonkyi",
+    "tag": "bonk",
+    "rol": "supp",
+    "profileIconId": 4852,
+    "summonerLevel": 364,
     "rankedStats": {
       "leagueId": "ffd63e47-7378-4940-80a7-6418786de73c",
       "queueType": "RANKED_SOLO_5x5",
@@ -178,7 +238,12 @@
     }
   },
   {
+    "streamer": "Sr.Lemon",
     "summonerName": "MrLemon",
+    "tag": "L3M0N",
+    "rol": "jungle",
+    "profileIconId": 6386,
+    "summonerLevel": 441,
     "rankedStats": {
       "leagueId": "b2f2727f-bcc1-46b5-b8b9-ba199553d0fb",
       "queueType": "RANKED_SOLO_5x5",
