@@ -2,9 +2,12 @@ const express = require("express");
 const fs = require("fs");
 const axios = require("axios");
 const cron = require("node-cron");
+const cors = require("cors"); 
 
 const app = express();
 const port = process.env.PORT || 3001;
+
+app.use(cors());
 
 const RIOT_API_KEY = "RGAPI-2ef0c92e-925b-4bf4-9988-6a6ff1e6898d"; // Reemplaza esto con tu clave de API de Riot ;)
 const players = [
