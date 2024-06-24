@@ -18,7 +18,7 @@ const players = [
     rol: "jungle",
   },
   { streamer: "Greddyy", username: "The Peanut King", tag: "LAN", rol: "mid" },
-  { streamer: "Dritzh", username: "Dritzh", tag: "098", rol: "adc" },
+  { streamer: "Dritzh", username: "Dritzh", tag: "TTV1", rol: "adc" },
   { streamer: "Pause", username: "pause", tag: "LAN", rol: "mid" },
   { streamer: "IDFK05", username: "Sleeper", tag: "9905", rol: "top" },
   { streamer: "Gerson", username: "Gërsön", tag: "LAN", rol: "supp" },
