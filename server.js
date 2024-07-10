@@ -11,24 +11,19 @@ app.use(cors());
 
 const RIOT_API_KEY = "RGAPI-2ef0c92e-925b-4bf4-9988-6a6ff1e6898d"; // Reemplaza esto con tu clave de API de Riot ;)
 const players = [
-  {
-    streamer: "Gangbang182",
-    username: "RedSight182",
-    tag: "LAN",
-    rol: "jungle",
-  },
-  { streamer: "Greddyy", username: "The Peanut King", tag: "LAN", rol: "mid" },
-  { streamer: "Dritzh", username: "Dritzh", tag: "TTV1", rol: "adc" },
-  { streamer: "Pause", username: "pause", tag: "LAN", rol: "mid" },
-  { streamer: "IDFK05", username: "Sleeper", tag: "9905", rol: "top" },
-  { streamer: "Gerson", username: "Gërsön", tag: "LAN", rol: "supp" },
-  { streamer: "Peregrino", username: "PP3R3GRIN0", tag: "2000", rol: "adc" },
-  { streamer: "xKeven", username: "Get Cachorred", tag: "FNTIC", rol: "adc" },
-  { streamer: "Tunnler", username: "Tunnler", tag: "LAN", rol: "mid" },
-  { streamer: "Powa", username: "Powa", tag: "Wapo", rol: "jungle" },
-  { streamer: "Sakuta", username: "sakuta", tag: "Die", rol: "top" },
-  { streamer: "Rejaimito", username: "Bonkyi", tag: "bonk", rol: "supp" },
-  { streamer: "Sr.Lemon", username: "MrLemon", tag: "L3M0N", rol: "jungle" },
+  { streamer: "Dritzh", username: "mwwvuywvg", tag: "O5DnN", rol: "adc" },
+  { streamer: "Pause", username: "eikigdbh", tag: "NqeHu", rol: "mid" },
+  { streamer: "Sleeper", username: "zvldcacoz", tag: "8xkci", rol: "top" },
+  { streamer: "Gerson", username: "xnnal", tag: "gS0mW", rol: "supp" },
+  { streamer: "xKeven", username: "ewecas", tag: "QHLjV", rol: "adc" },
+  { streamer: "Tunnler", username: "zeapennxm", tag: "pF1rp", rol: "top" },
+  { streamer: "Powa", username: "lguimzmml", tag: "s5BoK", rol: "jungle" },
+  { streamer: "Bonkyi", username: "oefti", tag: "9cNRn", rol: "supp" },
+  { streamer: "Sr.Lemon", username: "rydbamkju", tag: "MSBD1", rol: "jungle" },
+  { streamer: "Diegogo", username: "ietsup", tag: "h1Fzo", rol: "supp" },
+  { streamer: "Antmauricio", username: "rcwtrr", tag: "Wjluo", rol: "top" },
+  { streamer: "Miracle", username: "jdrcbb", tag: "7CoCo", rol: "adc" },
+
 ];
 
 const batchSize = 5; // Tamaño del lote de jugadores que se actualizarán cada vez
@@ -43,14 +38,14 @@ const getPUUID = async (username, tag) => {
 
 const getSummonerByPUUID = async (puuid) => {
   const response = await axios.get(
-    `https://la1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${RIOT_API_KEY}`
+    `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${RIOT_API_KEY}`
   );
   return response.data;
 };
 
 const getRankedStatsBySummonerId = async (summonerId) => {
   const response = await axios.get(
-    `https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerId}?api_key=${RIOT_API_KEY}`
+    `https://na1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerId}?api_key=${RIOT_API_KEY}`
   );
   return response.data;
 };
