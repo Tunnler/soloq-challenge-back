@@ -11,15 +11,15 @@ app.use(cors());
 
 const RIOT_API_KEY = "RGAPI-2ef0c92e-925b-4bf4-9988-6a6ff1e6898d"; // Reemplaza esto con tu clave de API de Riot ;)
 const players = [
-  { streamer: "Dritzh", username: "mwwvuywvg", tag: "O5DnN", rol: "adc" },
-  { streamer: "Pause", username: "eikigdbh", tag: "NqeHu", rol: "mid" },
+  { streamer: "Dritzh", username: "Dritzh", tag: "NA7", rol: "adc" },
+  { streamer: "Pause", username: "Pause", tag: "NAA", rol: "mid" },
   { streamer: "Sleeper", username: "zvldcacoz", tag: "8xkci", rol: "top" },
   { streamer: "Gerson", username: "xnnal", tag: "gS0mW", rol: "supp" },
   { streamer: "xKeven", username: "ewecas", tag: "QHLjV", rol: "adc" },
   { streamer: "Tunnler", username: "zeapennxm", tag: "pF1rp", rol: "top" },
   { streamer: "Powa", username: "lguimzmml", tag: "s5BoK", rol: "jungle" },
   { streamer: "Bonkyi", username: "oefti", tag: "9cNRn", rol: "supp" },
-  { streamer: "Sr.Lemon", username: "rydbamkju", tag: "MSBD1", rol: "jungle" },
+  { streamer: "Sr.Lemon", username: "MrLemonSex", tag: "Lemon", rol: "jungle" },
   { streamer: "Diegogo", username: "ietsup", tag: "h1Fzo", rol: "supp" },
   { streamer: "Antmauricio", username: "rcwtrr", tag: "Wjluo", rol: "top" },
   { streamer: "Miracle", username: "jdrcbb", tag: "7CoCo", rol: "adc" },
